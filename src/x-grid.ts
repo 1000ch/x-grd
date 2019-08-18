@@ -16,49 +16,45 @@ const justifyValues = [
 
 const templateHTML = `
   <style>
-    .Grid {
+    :host {
       display: flex;
       flex-wrap: wrap;
     }
-    .Grid.\-top {
+    :host([align="top"]) {
       align-items: flex-start;
     }
-    .Grid.\-middle {
+    :host([align="middle"]) {
       align-items: center;
     }
-    .Grid.\-bottom {
+    :host([align="bottom"]) {
       align-items: flex-end;
     }
-    .Grid.\-stretch {
+    :host([align="stretch"]) {
       align-items: stretch;
     }
-    .Grid.\-baseline {
+    :host([align="baseline"]) {
       align-items: baseline;
     }
-    .Grid.\-start {
+    :host([justify="start"]) {
       justify-content: flex-start;
     }
-    .Grid.\-center {
+    :host([justify="center"]) {
       justify-content: center;
     }
-    .Grid.\-end {
+    :host([justify="end"]) {
       justify-content: flex-end;
     }
-    .Grid.\-between {
+    :host([justify="between"]) {
       justify-content: space-between;
     }
-    .Grid.\-around {
+    :host([justify="around"]) {
       justify-content: space-around;
     }
   </style>
-  <div class="Grid">
-    <slot />
-  </div>
+  <slot />
 `;
 
 export default class XGrid extends HTMLElement {
-  grid: HTMLDivElement | null = null;
-
   get align(): string | undefined {
     if (this.hasAttribute('align')) {
       return this.getAttribute('align') || undefined;
@@ -95,30 +91,7 @@ export default class XGrid extends HTMLElement {
     super();
 
     this.attachShadow({
-      mode: 'open'
+      mode: 'closed'
     }).innerHTML = templateHTML;
-
-    if (this.shadowRoot) {
-      this.grid = this.shadowRoot.querySelector<HTMLDivElement>('div');
-    }
-  }
-
-  attributeChangedCallback(attributeName: string, oldValue: string, newValue: string) {
-    switch(attributeName) {
-      case 'align':
-        if (this.grid) {
-          this.grid.classList.remove(`-${oldValue}`);
-          this.grid.classList.add(`-${newValue}`);
-        }
-        break;
-      case 'justify':
-        if (this.grid) {
-          this.grid.classList.remove(`-${oldValue}`);
-          this.grid.classList.add(`-${newValue}`);
-        }
-        break;
-      default:
-        break;
-    }
   }
 }
