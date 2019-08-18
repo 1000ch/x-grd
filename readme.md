@@ -1,6 +1,11 @@
 # `<x-grd>`
 
-Simple, Light-weight and Flexible Web Components for grid layout.
+> Simple, Light-weight and Flexible Web Components for grid layout.
+
+[![Build Status](https://travis-ci.org/1000ch/x-grd.svg?branch=master)](https://travis-ci.org/1000ch/x-grd)
+[![NPM version](https://badge.fury.io/js/x-grd.svg)](http://badge.fury.io/js/x-grd)
+[![Dependency Status](https://david-dm.org/1000ch/x-grd.svg)](https://david-dm.org/1000ch/x-grd)
+[![devDependency Status](https://david-dm.org/1000ch/x-grd/dev-status.svg)](https://david-dm.org/1000ch/x-grd?type=dev)
 
 ## Install
 
