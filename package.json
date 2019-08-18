@@ -1,6 +1,6 @@
 {
   "name": "x-grd",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Simple, Light-weight and Flexible Web Components for grid layout.",
   "homepage": "https://github.com/1000ch/x-grd",
   "bugs": {
