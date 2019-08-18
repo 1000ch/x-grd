@@ -18,10 +18,31 @@
   },
   "scripts": {
     "build": "tsc && terser --output dist/x-grid.js dist/x-grid.js && terser --output dist/x-cell.js dist/x-cell.js",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.17",
+    "jest": "^24.9.0",
     "terser": "^4.1.4",
+    "ts-jest": "^24.0.2",
     "typescript": "^3.5.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/test/*.test.ts"
+    ]
   }
 }
