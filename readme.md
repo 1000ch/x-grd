@@ -16,7 +16,8 @@ Import `XGrid` and `XCell`, register them.
 
 ```html
 <script type="module">
-  import { XGrid, XCell } from './x-grd/index.js';
+  import XGrid from './x-grd/dist/x-grid.js';
+  import XCell from './x-grd/dist/x-cell.js';
   customElements.define('x-grid', XGrid);
   customElements.define('x-cell', XCell);
 </script>
