@@ -32,6 +32,9 @@ const templateHTML = `
 `;
 
 export default class XGrid extends HTMLElement {
+  /**
+   * Gets the align of the object.
+   */
   get align(): string | undefined {
     if (this.hasAttribute('align')) {
       return this.getAttribute('align') || undefined;
@@ -40,6 +43,9 @@ export default class XGrid extends HTMLElement {
     return undefined;
   }
 
+  /**
+   * Sets the align of the object.
+   */
   set align(value: string | undefined) {
     if (value == null) {
       this.removeAttribute('align');
@@ -48,6 +54,9 @@ export default class XGrid extends HTMLElement {
     }
   }
 
+  /**
+   * Gets the justify of the object.
+   */
   get justify(): string | undefined {
     if (this.hasAttribute('justify')) {
       return this.getAttribute('justify') || undefined;
@@ -56,6 +65,9 @@ export default class XGrid extends HTMLElement {
     return undefined;
   }
 
+  /**
+   * Sets the justify of the object.
+   */
   set justify(value: string | undefined) {
     if (value == null) {
       this.removeAttribute('justify');

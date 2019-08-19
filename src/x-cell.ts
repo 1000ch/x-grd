@@ -35,6 +35,9 @@ const templateHTML = `
 `;
 
 export default class XCell extends HTMLElement {
+  /**
+   * Gets the width of the object.
+   */
   get width(): string | undefined {
     if (this.hasAttribute('width')) {
       return this.getAttribute('width') || undefined;
@@ -43,6 +46,9 @@ export default class XCell extends HTMLElement {
     return undefined;
   }
 
+  /**
+   * Sets the width of the object.
+   */
   set width(value: string | undefined) {
     if (value == null) {
       this.removeAttribute('width');
