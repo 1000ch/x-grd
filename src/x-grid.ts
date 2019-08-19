@@ -16,40 +16,17 @@ const justifyValues = [
 
 const templateHTML = `
   <style>
-    :host {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    :host([align="top"]) {
-      align-items: flex-start;
-    }
-    :host([align="middle"]) {
-      align-items: center;
-    }
-    :host([align="bottom"]) {
-      align-items: flex-end;
-    }
-    :host([align="stretch"]) {
-      align-items: stretch;
-    }
-    :host([align="baseline"]) {
-      align-items: baseline;
-    }
-    :host([justify="start"]) {
-      justify-content: flex-start;
-    }
-    :host([justify="center"]) {
-      justify-content: center;
-    }
-    :host([justify="end"]) {
-      justify-content: flex-end;
-    }
-    :host([justify="between"]) {
-      justify-content: space-between;
-    }
-    :host([justify="around"]) {
-      justify-content: space-around;
-    }
+    :host { display: flex; flex-wrap: wrap; }
+    :host([align="top"]) { align-items: flex-start; }
+    :host([align="middle"]) { align-items: center; }
+    :host([align="bottom"]) { align-items: flex-end; }
+    :host([align="stretch"]) { align-items: stretch; }
+    :host([align="baseline"]) { align-items: baseline; }
+    :host([justify="start"]) { justify-content: flex-start; }
+    :host([justify="center"]) { justify-content: center; }
+    :host([justify="end"]) { justify-content: flex-end; }
+    :host([justify="between"]) { justify-content: space-between; }
+    :host([justify="around"]) { justify-content: space-around; }
   </style>
   <slot />
 `;

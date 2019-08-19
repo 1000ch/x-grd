@@ -16,51 +16,20 @@ const widthValues = [
 
 const templateHTML = `
   <style>
-    :host {
-      box-sizing: border-box;
-      flex-shrink: 0;
-    }
-    :host([width="fill"]) {
-      width: 0;
-      min-width: 0;
-      flex-grow: 1;
-    }
-    :host([width="1of12"]) {
-      width: calc(100% * 1 / 12);
-    }
-    :host([width="2of12"]) {
-      width: calc(100% * 2 / 12);
-    }
-    :host([width="3of12"]) {
-      width: calc(100% * 3 / 12);
-    }
-    :host([width="4of12"]) {
-      width: calc(100% * 4 / 12);
-    }
-    :host([width="5of12"]) {
-      width: calc(100% * 5 / 12);
-    }
-    :host([width="6of12"]) {
-      width: calc(100% * 6 / 12);
-    }
-    :host([width="7of12"]) {
-      width: calc(100% * 7 / 12);
-    }
-    :host([width="8of12"]) {
-      width: calc(100% * 8 / 12);
-    }
-    :host([width="9of12"]) {
-      width: calc(100% * 9 / 12);
-    }
-    :host([width="10of12"]) {
-      width: calc(100% * 10 / 12);
-    }
-    :host([width="11of12"]) {
-      width: calc(100% * 11 / 12);
-    }
-    :host([width="12of12"]) {
-      width: 100%;
-    }
+    :host { box-sizing: border-box; flex-shrink: 0; }
+    :host([width="fill"]) { width: 0; min-width: 0; flex-grow: 1; }
+    :host([width="1of12"]) { width: calc(100% * 1 / 12); }
+    :host([width="2of12"]) { width: calc(100% * 2 / 12); }
+    :host([width="3of12"]) { width: calc(100% * 3 / 12); }
+    :host([width="4of12"]) { width: calc(100% * 4 / 12); }
+    :host([width="5of12"]) { width: calc(100% * 5 / 12); }
+    :host([width="6of12"]) { width: calc(100% * 6 / 12); }
+    :host([width="7of12"]) { width: calc(100% * 7 / 12); }
+    :host([width="8of12"]) { width: calc(100% * 8 / 12); }
+    :host([width="9of12"]) { width: calc(100% * 9 / 12); }
+    :host([width="10of12"]) { width: calc(100% * 10 / 12); }
+    :host([width="11of12"]) { width: calc(100% * 11 / 12); }
+    :host([width="12of12"]) { width: 100%; }
   </style>
   <slot />
 `;
