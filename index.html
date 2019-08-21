@@ -80,10 +80,51 @@
       <h2>Install</h2>
       <pre><code class="bash">npm install x-grd</code></pre>
       <h2>Usage</h2>
-      <pre><code class="html">&lt;x-grid&gt;
-  &lt;x-cell width=&quot;3of12&quot;&gt;3of12&lt;/x-cell&gt;
-  &lt;x-cell width=&quot;9of12&quot;&gt;9of12&lt;/x-cell&gt;
-&lt;/x-grid&gt;</code></pre>
+      <p>Import <code>XGrid</code> and <code>XCell</code>, register them.</p>
+      <pre><code class="html">&lt;script type=&quot;module&quot;&gt;
+  import XGrid from &apos;./x-grd/dist/x-grid.js&apos;;
+  import XCell from &apos;./x-grd/dist/x-cell.js&apos;;
+  customElements.define(&apos;x-grid&apos;, XGrid);
+  customElements.define(&apos;x-cell&apos;, XCell);
+&lt;/script&gt;</code></pre>
+      <p>Put <code>&lt;x-grid&gt;</code> and <code>&lt;x-cell&gt;</code>.</p>
+      <pre><code class="html">&lt;x-grid align=&quot;stretch&quot; justify=&quot;center&quot;&gt;
+  &lt;x-cell width=&quot;fill&quot;&gt;&lt;/x-cell&gt;
+  &lt;x-cell width=&quot;2of12&quot;&gt;&lt;/x-cell&gt;
+&lt;/x-cell&gt;</code></pre>
+      <h2>API</h2>
+      <h3><code>&lt;x-grid align&gt;</code> attribute</h3>
+      <ul>
+        <li><code>top</code>: Pull items to top</li>
+        <li><code>middle</code>: Pull items to middle</li>
+        <li><code>bottom</code>: Pull items to bottom</li>
+        <li><code>stretch</code>: Stretch items</li>
+        <li><code>baseline</code>: Pull items to baseline</li>
+      </ul>
+      <h3><code>&lt;x-grid justify&gt;</code> attribute</h3>
+      <ul>
+        <li><code>start</code>: Layout items to start</li>
+        <li><code>center</code>: Layout items to center</li>
+        <li><code>end</code>: Layout items to end</li>
+        <li><code>between</code> Add spaces between items</li>
+        <li><code>around</code>: Add spaces around items</li>
+      </ul>
+      <h3><code>&lt;x-cell width&gt;</code> attribute</h3>
+      <ul>
+        <li><code>fill</code>: Set item width to left</li>
+        <li><code>1of12</code>: Set item width to 8.3%</li>
+        <li><code>2of12</code>: Set item width to 16.7%</li>
+        <li><code>3of12</code>: Set item width to 25%</li>
+        <li><code>4of12</code>: Set item width to 33%</li>
+        <li><code>5of12</code>: Set item width to 41.7%</li>
+        <li><code>6of12</code>: Set item width to 50%</li>
+        <li><code>7of12</code>: Set item width to 58.3%</li>
+        <li><code>8of12</code>: Set item width to 66.7%</li>
+        <li><code>9of12</code>: Set item width to 75%</li>
+        <li><code>10of12</code>: Set item width to 83.3%</li>
+        <li><code>11of12</code>: Set item width to 91.7%</li>
+        <li><code>12of12</code>: Set item width to 100%</li>
+      </ul>
       <h2>License</h2>
       <p><a href="https://1000ch.mit-license.org" rel="nofollow">MIT</a> © <a href="https://github.com/1000ch">Shogo Sensui</a></p>
     </div>
