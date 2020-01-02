@@ -20,10 +20,11 @@ Import `XGrid` and `XCell`, register them.
 
 ```html
 <script type="module">
-  import XGrid from 'https://cdn.jsdelivr.net/npm/x-grd/dist/x-grid.js';
-  import XCell from 'https://cdn.jsdelivr.net/npm/x-grd/dist/x-cell.js';
-  customElements.define('x-grid', XGrid);
-  customElements.define('x-cell', XCell);
+import XGrid from 'https://cdn.jsdelivr.net/npm/x-grd/dist/x-grid.js';
+import XCell from 'https://cdn.jsdelivr.net/npm/x-grd/dist/x-cell.js';
+
+customElements.define('x-grid', XGrid);
+customElements.define('x-cell', XCell);
 </script>
 ```
 
