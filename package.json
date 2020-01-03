@@ -16,8 +16,10 @@
     "email": "shogosensui@gmail.com",
     "web": "https://github.com/1000ch"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
-    "build": "tsc && terser --output dist/x-grid.js dist/x-grid.js && terser --output dist/x-cell.js dist/x-cell.js",
+    "build": "tsc && terser --output dist/index.js dist/index.js && terser --output dist/x-grid.js dist/x-grid.js && terser --output dist/x-cell.js dist/x-cell.js",
     "prepublish": "npm run build",
     "test": "jest"
   },
