@@ -1,8 +1,10 @@
 import XGrid from 'https://unpkg.com/x-grd/dist/x-grid.js';
 import XCell from 'https://unpkg.com/x-grd/dist/x-cell.js';
+import XMarked from 'https://unpkg.com/x-marked/dist/index.js';
 
 customElements.define('x-grid', XGrid);
 customElements.define('x-cell', XCell);
+customElements.define('x-marked', XMarked);
 
 const grid = document.querySelector('#grid');
 const align = document.querySelector('#align-items');
