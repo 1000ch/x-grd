@@ -20,8 +20,7 @@ Import `XGrid` and `XCell`, register them.
 
 ```html
 <script type="module">
-import XGrid from 'https://unpkg.com/x-grd/dist/x-grid.js';
-import XCell from 'https://unpkg.com/x-grd/dist/x-cell.js';
+import { XGrid, XCell } from 'https://unpkg.com/x-grd';
 
 customElements.define('x-grid', XGrid);
 customElements.define('x-cell', XCell);

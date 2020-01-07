@@ -1,6 +1,5 @@
-import XGrid from 'https://unpkg.com/x-grd/dist/x-grid.js';
-import XCell from 'https://unpkg.com/x-grd/dist/x-cell.js';
-import XMarked from 'https://unpkg.com/x-marked/dist/index.js';
+import { XGrid, XCell } from 'https://unpkg.com/x-grd';
+import XMarked from 'https://unpkg.com/x-marked';
 
 customElements.define('x-grid', XGrid);
 customElements.define('x-cell', XCell);
