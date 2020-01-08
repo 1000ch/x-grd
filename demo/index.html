@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>&lt;x-grd&gt; Demo</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: menlo, monospace;
+        font-size: 16px;
+      }
+      .container {
+        margin: auto;
+        padding: 16px;
+        max-width: 960px;
+      }
+    </style>
+    <script type="module" src="index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>&lt;x-grd&gt; Demo</h1>
+      <div style="margin-bottom: 16px;">
+        &lt;x-grid align=<select id="align-items">
+          <option value="" selected>-</option>
+          <option value="top">top</option>
+          <option value="middle">middle</option>
+          <option value="bottom">bottom</option>
+          <option value="stretch">stretch</option>
+          <option value="baseline">baseline</option>
+        </select>
+        justify=<select id="justify-content">
+          <option value="" selected>-</option>
+          <option value="left">left</option>
+          <option value="center">center</option>
+          <option value="right">right</option>
+          <option value="between">between</option>
+          <option value="around">around</option>
+        </select>&gt;
+      </div>
+      <x-grid id="grid" style="min-height: 240px;"></x-grid>
+      <div style="margin-top: 16px;">
+        &lt;/x-grid&gt;
+        <button id="add" class="btn" type="button">Add a cell</button>
+        <button id="remove" class="btn" type="button">Remove a cell</button>
+      </div>
+      <template id="template-cell">
+        <x-cell style="padding: 16px; border: 1px dashed #999;">
+          &lt;x-cell width=<select>
+            <option value="" selected>-</option>
+            <option value="fill">fill</option>
+            <option value="1of12">1of12</option>
+            <option value="2of12">2of12</option>
+            <option value="3of12">3of12</option>
+            <option value="4of12">4of12</option>
+            <option value="5of12">5of12</option>
+            <option value="6of12">6of12</option>
+            <option value="7of12">7of12</option>
+            <option value="8of12">8of12</option>
+            <option value="9of12">9of12</option>
+            <option value="10of12">10of12</option>
+            <option value="11of12">11of12</option>
+            <option value="12of12">12of12</option>
+          </select>&gt;
+          <p contenteditable="true">(click to edit)</p>
+          &lt;/x-cell&gt;
+        </x-cell>
+      </template>
+    </div>
+  </body>
+</html>
