@@ -1,4 +1,4 @@
-import XGrid from './x-grid';
-import XCell from './x-cell';
+import XGrid from './x-grid.js';
+import XCell from './x-cell.js';
 
 export { XGrid, XCell };
