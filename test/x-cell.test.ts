@@ -12,4 +12,10 @@ describe('XCell', (): void => {
     const cell = new XCell();
     expect(cell).toBeInstanceOf(HTMLElement);
   });
+
+  test('should behave as cell', (): void => {
+    const cell = new XCell();
+    cell.width = 'fill';
+    expect(cell.getAttribute('width')).toBe('fill');
+  });
 })

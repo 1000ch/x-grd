@@ -12,4 +12,12 @@ describe('XGrid', (): void => {
     const grid = new XGrid();
     expect(grid).toBeInstanceOf(HTMLElement);
   });
+
+  test('should behave as grid', (): void => {
+    const grid = new XGrid();
+    grid.align = 'top';
+    grid.justify = 'start';
+    expect(grid.getAttribute('align')).toBe('top');
+    expect(grid.getAttribute('justify')).toBe('start');
+  });
 })
