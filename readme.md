@@ -1,4 +1,4 @@
-# x-grd ![GitHub Actions Status](https://github.com/1000ch/x-grd/workflows/test/badge.svg)
+# x-grd ![GitHub Actions Status](https://github.com/1000ch/x-grd/workflows/test/badge.svg?branch=main)
 
 > Simple, Light-weight and Flexible Web Components for grid layout.
 
